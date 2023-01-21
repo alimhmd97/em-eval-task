@@ -1,1 +1,14 @@
-<p>posts works!</p>
+
+<div class="header"><h1 > <span class="underlined underline-mask">Posts</span></h1></div>
+<!--  -->
+<mat-card *ngFor="let post of posts" 
+(click)="showPostdetails(post.id)">
+    <mat-card-content class="post_card_wrapper">
+        <span class="post_title">
+            {{post.title.toUpperCase()}}
+    </span>
+        <p>
+            {{post.body}}
+        </p>
+    </mat-card-content>
+  </mat-card>

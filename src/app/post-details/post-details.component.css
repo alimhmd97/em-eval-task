@@ -1,0 +1,77 @@
+.post_title {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.post_card_wrapper {
+    color: #D6C8BC;
+    background-color: #3c3835;
+    width: 80%;
+    border-radius: 5px;
+    margin: 50px auto 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.post_content {
+    /* padding: 16px ;  */
+    font-size: 1.2rem;
+    background-color: #646363;
+    width: 95%;
+    border-radius: 5px;
+    margin: 10px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
+    color: #D6C8BC;
+}
+
+.comments_content {
+    background-color: #8A8887;
+    width: 95%;
+    border-radius: 5px;
+    margin: 5px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
+    /* font-size: .8rem; */
+    color: black;
+}
+
+.comments_title {
+    color: #D6C8BC;
+    text-align: center;
+    margin: 5px;
+}
+
+.comments_header {
+    display: flex;
+    justify-content: center;
+}
+
+/*  */
+h5 {
+    font-size: clamp(1rem, 2.5vmin, 1.2rem);
+    font-family: sans-serif;
+    color: hsl(0 0% 98%);
+}
+
+.underlined {
+    position: relative;
+    color: #8A8887;
+    padding-bottom: 10px;
+
+}
+
+.underline-mask:after {
+    content: '';
+    position: absolute;
+    top: 95%;
+    width: 150%;
+    aspect-ratio: 3 / 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+    border: 3px solid #5E858A;
+    /* Use a conic gradient mask to hide and show the bits you want */
+    --spread: 140deg;
+    --start: 290deg;
+    mask: conic-gradient(from var(--start), #D6C8BC 0 var(--spread), transparent var(--spread));
+}

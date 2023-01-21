@@ -1,1 +1,4 @@
 <router-outlet></router-outlet>
+<div  class="loader_wrapper" *ngIf="isLoading|async">
+    <mat-spinner ></mat-spinner>
+</div>     

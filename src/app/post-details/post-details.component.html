@@ -1,0 +1,36 @@
+<mat-card class="post_card_wrapper">
+    <!-- post card -->
+    <mat-card>
+        <mat-card-content class="post_content">
+            <span class="post_title">
+                {{post?.title?.toUpperCase()}}
+            </span>
+            <p>
+                {{post?.body}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+
+    <!-- comments card -->
+    <div class="comments_header">
+        <h5>
+            <span class="underlined underline-mask">Commmets</span>
+        </h5>
+    </div>
+
+    <mat-card *ngFor="let comment of comments">
+        <mat-card-content class="comments_content">
+
+            <p>
+                <span style="font-weight: 700;"> {{comment?.name?.toUpperCase()}} <small
+                        style="font-size: .8rem;font-weight: normal;">({{comment?.email}})</small></span>
+            </p>
+
+            <p>
+                {{comment?.body}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <!--  -->
+</mat-card>

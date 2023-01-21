@@ -23,8 +23,10 @@
         <mat-card-content class="comments_content">
 
             <p>
-                <span style="font-weight: 700;"> {{comment?.name?.toUpperCase()}} <small
-                        style="font-size: .8rem;font-weight: normal;">({{comment?.email}})</small></span>
+                <a href="mailto:comment?.email">
+                    <span style="font-weight: 700;"> {{comment?.name?.toUpperCase()}} <small
+                            style="font-size: .8rem;font-weight: normal;">({{comment?.email}})</small></span>
+                </a>
             </p>
 
             <p>

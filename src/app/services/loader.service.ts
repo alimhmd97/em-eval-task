@@ -10,9 +10,9 @@ export class LoaderService {
   private loading$ = new BehaviorSubject(true)
 
   constructor(private router: Router) {
-    this.router.events.subscribe((e :any) => {
-       this.navigationInterceptor(e);
-     })
+    this.router.events.subscribe((e: any) => {
+      this.navigationInterceptor(e);
+    })
   }
 
   // Shows and hides the loading spinner during RouterEvent changes
@@ -21,29 +21,23 @@ export class LoaderService {
       this.setIsLoading(true)
     }
     if (event instanceof NavigationEnd) {
-              this.setIsLoading(false)
-
-
+      this.setIsLoading(false)
     }
 
     // Set loading state to false in both of the below events to hide the spinner in case a request fails
     if (event instanceof NavigationCancel) {
-              this.setIsLoading(false)
-
-
+      this.setIsLoading(false)
     }
     if (event instanceof NavigationError) {
-              this.setIsLoading(false)
-
-
+      this.setIsLoading(false)
     }
   }
   // -----------
-  getIsLoading(){
+  getIsLoading() {
     return this.loading$;
   }
 
-  setIsLoading(newValue:boolean) {
+  setIsLoading(newValue: boolean) {
     this.loading$.next(newValue)
   }
 }

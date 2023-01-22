@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiCallsInterceptor } from './interceptors/api-calls-interceptor';
 import {MatCardModule} from '@angular/material/card'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatProgressSpinnerModule
-    
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [
     {
